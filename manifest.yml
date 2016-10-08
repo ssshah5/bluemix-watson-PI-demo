@@ -3,8 +3,6 @@ applications:
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: Jenkins-PI-Node-Test
-  host: Jenkins-PI-Node-Test
   disk_quota: 1024M
   services:
   - Jenkins-PI-Node-Test-personality_insights
