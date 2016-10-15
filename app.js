@@ -35,9 +35,14 @@ var personalityInsights = watson.personality_insights({
   password: '<password>'
 });
 
+var status = require('./routes/status');
+
 app.get('/', function(req, res) {
   res.render('index', { ct: req._csrfToken });
 });
+
+// uncomment this line to fix test
+//app.get('/status', status);
 
 app.post('/api/profile', function(req, res, next) {
   var parameters = extend(req.body, { acceptLanguage : i18n.lng() });

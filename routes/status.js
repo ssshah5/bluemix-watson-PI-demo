@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 IBM Corp. All Rights Reserved.
+ * Copyright 2016 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,20 +14,8 @@
  * limitations under the License.
  */
 
-'use strict';
+var status = function (req, res, next) {
+  res.status(200).send('OK')
+}
 
-var app = require('../app');
-var request = require('supertest');
-var nock = require('nock');
-
-describe('express', function() {
-
-  it('load home page when GET /', function(done) {
-    request(app).get('/').expect(200, done);
-  });
-
-  it('Status page returns 200', function(done) {
-    request(app).get('/status').expect(200, done)
-  })
-
-});
+module.exports = status
