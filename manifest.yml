@@ -2,7 +2,7 @@ applications:
 - path: .
   memory: 256M
   instances: 1
-  domain: mybluemix.net
+  domain: stage1.ng.bluemix.net
   disk_quota: 1024M
   services:
   - pipeline-test-personality_insights
